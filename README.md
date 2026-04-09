@@ -108,3 +108,72 @@ En un contexto laboral real, el siguiente paso sería conectar estos datos de te
 ## Contacto
 
 ¿Preguntas o feedback? Puedes encontrarme en **[LinkedIn](https://www.linkedin.com/in/ari-vladimir/)** o escribirme a **[av.deleoncalderon@gamil.com]**.
+
+# Global Analysis of YouTube Trending Trends — Sterling & Draper
+
+![Python](https://img.shields.io/badge/python-357ebd?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23357ebd.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
+
+---
+
+## Objective / Business Question
+
+An advertising agency needed to know **where to allocate their YouTube advertising budget** most efficiently. The questions guiding the analysis were:
+
+1. Which video categories appear most frequently in trending lists?
+2. How does this distribution vary across countries?
+3. What does the US market consume compared to the rest of the world?
+
+---
+
+## Data
+
+**Source:** Aggregation table `trending_by_time` provided by the data engineering team of the simulated company.
+
+**Content:** 12,343 records covering the period from **November 2017 to June 2018**, with the following columns:
+
+| Field | Description |
+|---|---|
+| `record_id` | Unique primary key |
+| `region` | Country of the record (France, India, Japan, Russia, USA) |
+| `trending_date` | Date when videos were trending |
+| `category_title` | Content category (18 categories in total) |
+| `videos_count` | Number of trending videos in that category on that day |
+
+---
+
+## Process
+
+**Cleaning and Preparation (Python + Pandas):**
+- Converted `trending_date` from `object` to `datetime64` to enable time filters in Tableau.
+- Verified absence of null values in all columns (result: 0 nulls).
+- No joins were necessary; data was already pre-aggregated by region and category.
+- **Key assumption:** each row represents a daily snapshot; it does not reflect individual videos but rather volume per category.
+
+**Analysis (Python):**
+- Total sum of `videos_count` by category and region to identify historical dominance.
+- Last 7 days filter to capture the most recent market state.
+
+**Visualization (Tableau):**
+- Interactive dashboard with global date and country filters.
+- Area charts for trend history in absolute values and percentages.
+
+---
+
+## Deliverable
+
+🔗 **[View Dashboard on Tableau Public](https://public.tableau.com/app/profile/ari.de.le.n/viz/YouTube_Trending_Analysis_SterlingDraper/Dashboard1?publish=yes)**
+
+📓 The preprocessing notebook is available in this repository: `youtube_trends_preprocessing.ipynb`
+
+**How to run the notebook:**
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Install dependencies
+pip install pandas
+
+# Open the notebook
+jupyter notebook youtube_trends_preprocessing.ipynb
