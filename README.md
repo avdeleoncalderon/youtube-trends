@@ -177,3 +177,38 @@ pip install pandas
 
 # Open the notebook
 jupyter notebook youtube_trends_preprocessing.ipynb
+```
+The trending_by_time.csv file must be in the same folder as the notebook.
+
+## Insights
+1. **Entertainment and Music dominate globally.** These two categories consistently concentrate the highest volume of trending videos across all 5 countries analyzed, making them the safest bets for mass-reach campaigns.
+
+2. **The US has a more fragmented consumption profile.** Unlike other countries, the US market distributes its attention across more categories (Entertainment, Music, Howto & Style, Comedy), requiring more granular segmentation for local campaigns.
+
+3. **Trends are ephemeral.** Visibility peaks last between 24 and 48 hours, implying that advertising value lies in reaction speed, not long-term planning within a single trend.
+
+---
+
+## Recommendation / Next Step
+In a real business context, the next step would be to connect these trending data with conversion metrics and cost-per-click (CPC) by category, to determine not only where there is more visibility, but where each dollar invested generates the highest return. I would also evaluate expanding the analysis to more regions to strengthen global segmentation decisions.
+
+---
+
+## Repository Structure
+
+```
+📁 youtube-trends-analysis/
+├── trending_by_time.csv               # Dataset de entrada
+├── youtube_trends_preprocessing.ipynb # Notebook de limpieza y análisis
+└── README.md                          # Este archivo
+```
+---
+
+## Technologies Used
+- **Python 3.9** · Pandas — cleaning, type conversion, and exploratory analysis
+- **Tableau Public** — interactive visualization and final dashboard
+
+---
+
+## Contact
+Questions or feedback? You can find me on **[LinkedIn](https://www.linkedin.com/in/ari-vladimir/)** or email me at [av.deleoncalderon@gmail.com].
