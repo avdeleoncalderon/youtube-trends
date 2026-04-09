@@ -107,4 +107,4 @@ En un contexto laboral real, el siguiente paso sería conectar estos datos de te
 
 ## Contacto
 
-¿Preguntas o feedback? Puedes encontrarme en **[LinkedIn](https://www.linkedin.com/)** o escribirme a **[tu-email@ejemplo.com]**.
+¿Preguntas o feedback? Puedes encontrarme en **[LinkedIn](https://www.linkedin.com/)** o escribirme a **[av.deleoncalderon@gamil.com]**.
